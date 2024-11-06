@@ -1,6 +1,7 @@
 import AboutSection from "@/components/AboutSection";
 import ChooseUsSection from "@/components/ChooseUsSection";
-import Quote from "@/components/Quote";
+//import Quote from "@/components/Quote";
+import Reviews from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
 import Stats from "@/components/Stats";
 import TitlePage from "@/components/TitlePage";
@@ -9,9 +10,9 @@ export default function Home() {
   return (
     <>
       <TitlePage />
-      <div className="mt-[-5rem]">
+      {/*<div className="mt-[-15rem]">
         <Quote />
-      </div>
+      </div>*/}
       <AboutSection />
       <div className="relative z-10"> {/* Ensure higher z-index if needed */}
         <Stats />
@@ -20,6 +21,7 @@ export default function Home() {
         <ServicesSection />
       </div>
       <ChooseUsSection />
+      <Reviews />
     </>
   );
 }

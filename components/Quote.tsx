@@ -7,6 +7,22 @@ export default function Example() {
           </div>
           <form action="#" method="POST" className="px-4 pb-4">
             <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-4">
+              {/* Full Name Field */}
+              <div className="sm:col-span-3">
+                <label htmlFor="name" className="block text-sm font-semibold text-white">
+                  First name
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="given-name"
+                    className="mt-1 block w-full rounded-md bg-white/10 px-2 py-1 text-white text-sm shadow-sm focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+              </div>
+              
               {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-white">

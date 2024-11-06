@@ -1,23 +1,25 @@
-import { MdRoofing } from "react-icons/md"
-import { GiKitchenTap } from "react-icons/gi"
+import { MdRoofing, MdOutlineCleaningServices } from "react-icons/md"
+import { SlEnergy } from "react-icons/sl";
+import Link from "next/link"
 
 const cards = [
   {
-    name: 'Superior Roofing Services',
-    description: 'Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.',
+    name: 'Roofing & Exterior Services',
+    description: 'We specialize in roof repairs, re-roofs, exterior cleaning, and driveway cleaning. Our services are reliable and efficient.',
     icon: MdRoofing,
   },
   {
-    name: 'Roof Repair & Maintenance',
-    description: 'Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.',
-    icon: MdRoofing,
+    name: 'Cleaning Services',
+    description: 'We offer a range of cleaning services for your home or business, including pressure washing, gutter cleaning, and more.',
+    icon: MdOutlineCleaningServices,
   },
   {
-    name: 'Leak Detection & Repair',
-    description: 'Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.',
-    icon: GiKitchenTap,
+    name: 'Loft Insulation & Energy Efficiency',
+    description: 'We offer loft insulation and energy-saving services to help you reduce energy costs and keep your home warm in winter and cool in summer.',
+    icon: SlEnergy,
   },
-]
+];
+
 
 export default function Example() {
   return (
@@ -49,8 +51,7 @@ export default function Example() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Our Services</h2>
           <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat.
+          We offer a variety of services including roofing repairs, cleaning, insulation, and more. Take a look below!
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
@@ -63,6 +64,15 @@ export default function Example() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center items-center h-full mt-16">
+          <Link
+            href="/services"
+            type="button"
+            className="rounded-md bg-white px-3.5 py-2.5 text-md font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200"
+          >
+            View all
+          </Link>
         </div>
       </div>
     </div>

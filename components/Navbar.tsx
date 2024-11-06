@@ -1,6 +1,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { FaSquarePhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import logo from '../public/images/logo.png';
+import Image from 'next/image';
+import Link from 'next/link';
 export default function Example() {
   return (
     <Disclosure as="nav" className="bg-white shadow">
@@ -17,54 +22,75 @@ export default function Example() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
+              <Image
                 alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
+                src={logo}
+                width={60}
+                height={60}
               />
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-              <a
-                href="#"
+              <Link
+                href="/"
                 className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
               >
                 Home
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/about"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 About
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/projects"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Projects
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/Services"
+                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                Services
+              </Link>
+              <Link
+                href="/contact"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="rounded-full bg-white p-1 text-pink-400 hover:text-gray-500 focus:outline-none"
+              className="rounded-full bg-white p-1 text-blue-400 hover:text-gray-500 focus:outline-none"
             >
-              <span className="sr-only">View Instagram</span>
-              <FaInstagram className='text-3xl' />
+              <span className="sr-only">Send email</span>
+              <Link href='mailto:sjdexteriorcleaningRRLTD@gmail.com'>< MdEmail className='text-3xl'/></Link>
+            </button>
+            <button
+              type="button"
+              className="rounded-full bg-white p-1 text-green-400 hover:text-gray-500 focus:outline-none"
+            >
+              <span className="sr-only">Call phone</span>
+              <Link href='tel:03338800209'><FaSquarePhone className='text-3xl' /></Link>
             </button>
             <button
               type="button"
               className="rounded-full bg-white p-1 text-blue-700 hover:text-gray-500 focus:outline-none"
             >
               <span className="sr-only">View Facebook</span>
-              <FaFacebook className='text-3xl'/>
+              <Link href='https://www.facebook.com/profile.php?id=61557656972924' target='_blank'><FaFacebook className='text-3xl'/></Link>
+            </button>
+            <button
+              type="button"
+              className="rounded-full bg-white p-1 text-green-700 hover:text-gray-500 focus:outline-none"
+            >
+              <span className="sr-only">View Whatsapp</span>
+              <Link href='https://wa.me/+447864808832' target='_blank'><FaWhatsapp className='text-3xl'/></Link>
             </button>
 
             {/* Profile dropdown */}
