@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function TitlePage() {
   return (
     <>
-      <div className="relative w-full h-[45rem]">
+      <div className="relative w-full h-[35rem]">
         <Image
           src={roofImage}
           alt="Roof"

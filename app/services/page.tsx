@@ -1,35 +1,36 @@
+import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
 
 const roofing = [
-    'Roof Repairs',
-    'Roof Cleaning',
-    'Roof Sealing',
-    'Gutter Replacements',
-    'Chimney Repointing',
-    'Fascia and Soffits Sealing',
-    'Dry Verge System',
-    'Dry Ridge System',
-    'Render Repairs',
-    'Ridge Replacements',
-    'EPDM Flat Roofs',
-    'Much More...'
+  'Roof Repairs',
+  'Roof Cleaning',
+  'Roof Sealing',
+  'Gutter Replacements',
+  'Chimney Repointing',
+  'Fascia and Soffits Sealing',
+  'Dry Verge System',
+  'Dry Ridge System',
+  'Render Repairs',
+  'Ridge Replacements',
+  'EPDM Flat Roofs',
+  'Much More...'
 ];
 
 const cleaning = [
-    'Roof Cleaning',
-    'Sealing Roofs',
-    'Fascia/Gutter Cleaning',
-    'Window Cleaning',
-    'Re-sealing / Re-sanding',
-    'Render Cleaning',
-    'Restore Tarmac Drives',
-    'Concrete Cleaning',
+  'Roof Cleaning',
+  'Sealing Roofs',
+  'Fascia/Gutter Cleaning',
+  'Window Cleaning',
+  'Re-sealing / Re-sanding',
+  'Render Cleaning',
+  'Restore Tarmac Drives',
+  'Concrete Cleaning',
 ];
 
 const Services = () => {
   return (
     <>
-      <div className="bg-white px-6 py-16 lg:px-8">
+      <div className="bg-white px-6 pt-8 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-base font-semibold text-indigo-600">What We Offer</p>
           <h2 className="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Our Services</h2>
@@ -62,6 +63,17 @@ const Services = () => {
             </div>
           ))}
         </div>
+      </div>
+      
+      {/* Centered Button for Free Quote */}
+      <div className="flex justify-center py-10">
+      <Link
+          href='/contact'
+            type="button"
+            className="flex items-center space-x-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-700"
+          >
+            <span>Get a FREE Quote</span>
+        </Link>
       </div>
     </>
   );

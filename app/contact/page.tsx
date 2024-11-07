@@ -15,27 +15,34 @@ const Page = () => {
       </div>
 
       {/* Contact Section, centered and evenly spaced in a row on large screens, column on smaller screens */}
-      <div className="flex flex-col lg:flex-row justify-evenly items-center px-6 lg:px-8 space-y-8 lg:space-y-0">
-        <div className="flex flex-col lg:flex-row w-full justify-evenly lg:w-auto space-y-8 lg:space-y-0 lg:space-x-8">
-          <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full sm:w-1/3">
+      <div className="flex flex-col lg:flex-row justify-center md:justify-center items-center px-6 lg:px-8 space-y-8 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row justify-center items-center w-full lg:w-auto space-y-8 lg:space-y-0 lg:space-x-8">
+          {/* Mobile Contact Box */}
+          <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 justify-center h-[150px]">
             <FaMobileButton className="text-4xl text-indigo-600" />
             <div>
-              <h1 className="font-bold text-lg lg:text-2xl">Mobile</h1>
-              <h1 className="font-bold text-2xl lg:text-4xl">0123 456 789</h1>
+              <h1 className="font-bold text-lg md:text-3xl lg:text-2xl">Mobile</h1>
+              <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl">0786 480 8832</h1>
             </div>
           </div>
-          <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full sm:w-1/3">
+          {/* Landline Contact Box */}
+          <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 justify-center h-[150px]">
             <FaPhone className="text-4xl text-indigo-600" />
             <div>
-              <h1 className="font-bold text-lg lg:text-2xl">Landline</h1>
-              <h1 className="font-bold text-2xl lg:text-4xl">0123 456 789</h1>
+              <h1 className="font-bold text-lg md:text-3xl lg:text-2xl">Landline</h1>
+              <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl">0333 880 0209</h1>
             </div>
           </div>
-          <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full sm:w-1/3">
-            <MdEmail className="text-4xl text-indigo-600" />
-            <div>
-              <h1 className="font-bold text-lg lg:text-2xl">Email</h1>
-              <h1 className="font-bold text-2xl lg:text-4xl">0123 456 789</h1>
+          {/* Email Contact Box */}
+          <div className="flex items-center justify-center bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 h-[150px]">
+            <div className="flex flex-col items-center justify-center w-full">
+              <MdEmail className="text-4xl text-indigo-600 flex-shrink-0" />
+              <div className="flex flex-col items-center w-full">
+                <h1 className="font-bold text-lg md:text-3xl lg:text-2xl text-center">Email</h1>
+                <h1 className="font-bold text-sm md:text-base lg:text-md break-words overflow-hidden sm:text-base max-w-full text-center">
+                  sjdexteriorcleaningRRLTD@gmail.com
+                </h1>
+              </div>
             </div>
           </div>
         </div>
