@@ -14,9 +14,9 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Contact Section, centered and evenly spaced in a row on large screens */}
+      {/* Contact Section, centered and evenly spaced in a row on large screens, column on smaller screens */}
       <div className="flex flex-col lg:flex-row justify-evenly items-center px-6 lg:px-8 space-y-8 lg:space-y-0">
-        <div className="flex flex-row w-full justify-evenly lg:w-auto space-x-8">
+        <div className="flex flex-col lg:flex-row w-full justify-evenly lg:w-auto space-y-8 lg:space-y-0 lg:space-x-8">
           <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full sm:w-1/3">
             <FaMobileButton className="text-4xl text-indigo-600" />
             <div>
@@ -51,7 +51,6 @@ const Page = () => {
             width="100%"
             height="300"  // Smaller height on smaller screens
             style={{ border: 0 }}
-            allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

@@ -1,7 +1,7 @@
 const stats = [
-    { id: 1, name: 'Years in business', value: '15+' },
-    { id: 2, name: 'Happy Clients', value: '1500+' },
-    { id: 3, name: 'Projects Completed', value: '2000+' },
+    { id: 1, name: 'Years in business', value: '10+' },
+    { id: 2, name: 'Happy Clients', value: '1000+' },
+    { id: 3, name: 'Projects Completed', value: '1000+' },
   ]
   
   export default function Example() {

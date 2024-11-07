@@ -75,19 +75,6 @@ const reviews = {
       `,
       author: 'Angela Spokes',
     },
-    /*{
-        id: 5,
-        rating: 5,
-        content: `
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D122180291354069033%26id%3D61552071011202&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`
-    },
-    {
-        id: 6,
-        rating: 5,
-        content: `
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D122152897730069033%26id%3D61552071011202&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        `
-    }*/
   ],
 };
 
@@ -97,9 +84,8 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const reviewsPerSlide = 2;  // Show 2 reviews per slide on larger screens
+  const reviewsPerSlide = 2;
 
-  // Slide navigation logic
   const nextSlide = () => {
     if (currentIndex + reviewsPerSlide < reviews.featured.length) {
       setCurrentIndex((prevIndex) => prevIndex + reviewsPerSlide);
@@ -116,14 +102,10 @@ export default function Example() {
     <div className="bg-white py-16">
       <h1 className="text-3xl font-bold text-center mb-8">Our Customers Love Us</h1>
 
-      {/* Carousel Wrapper */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Carousel Content */}
         <div className="flex justify-center gap-8 overflow-hidden">
-          {/* Display reviews based on screen size */}
           {reviews.featured.slice(currentIndex, currentIndex + reviewsPerSlide).map((review) => (
             <div key={review.id} className="p-6 bg-gray-100 border rounded-lg w-full sm:w-full lg:w-1/2 min-h-[400px]">
-              {/* Displaying Rating */}
               <div className="flex items-center justify-between mb-4">
                 <h4 className="text-sm font-bold text-gray-900">{review.author}</h4>
                 <div className="mt-1 flex items-center">
@@ -139,16 +121,19 @@ export default function Example() {
                   ))}
                 </div>
               </div>
-              {/* Displaying the Facebook iframe review */}
-              <div
-                dangerouslySetInnerHTML={{ __html: review.content }}
-                className="text-base italic text-gray-600 max-w-full"
-              />
+              {/* Wrapper for the iframe and overlay */}
+              <div className="relative">
+                <div
+                  dangerouslySetInnerHTML={{ __html: review.content }}
+                  className="text-base italic text-gray-600 max-w-full"
+                />
+                {/* Overlay to make iframe unclickable */}
+                <div className="absolute inset-0 bg-transparent" />
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Carousel Controls (Next/Previous) */}
         <button
           onClick={prevSlide}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-gray-800 p-2 rounded-full shadow-md"

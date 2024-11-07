@@ -5,6 +5,7 @@ import Reviews from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
 import Stats from "@/components/Stats";
 import TitlePage from "@/components/TitlePage";
+import TitleStats from "@/components/TitleStats";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       {/*<div className="mt-[-15rem]">
         <Quote />
       </div>*/}
+      <TitleStats />
       <AboutSection />
       <div className="relative z-10"> {/* Ensure higher z-index if needed */}
         <Stats />
