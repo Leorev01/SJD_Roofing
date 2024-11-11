@@ -1,5 +1,5 @@
 import Quote from '@/components/Quote';
-import React from 'react';
+import Link from 'next/link';
 import { FaMobileButton } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -18,23 +18,26 @@ const Page = () => {
       <div className="flex flex-col lg:flex-row justify-center md:justify-center items-center px-6 lg:px-8 space-y-8 lg:space-y-0">
         <div className="flex flex-col lg:flex-row justify-center items-center w-full lg:w-auto space-y-8 lg:space-y-0 lg:space-x-8">
           {/* Mobile Contact Box */}
-          <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 justify-center h-[150px]">
+          <Link className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 justify-center h-[150px] hover:bg-gray-200"
+          href='tel:0786 480 8832'>
             <FaMobileButton className="text-4xl text-indigo-600" />
             <div>
               <h1 className="font-bold text-lg md:text-3xl lg:text-2xl">Mobile</h1>
               <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl">0786 480 8832</h1>
             </div>
-          </div>
+          </Link>
           {/* Landline Contact Box */}
-          <div className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 justify-center h-[150px]">
+          <Link className="flex items-center space-x-4 bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 justify-center h-[150px] hover:bg-gray-200"
+          href='tel:0333 880 0209'>
             <FaPhone className="text-4xl text-indigo-600" />
             <div>
               <h1 className="font-bold text-lg md:text-3xl lg:text-2xl">Landline</h1>
               <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl">0333 880 0209</h1>
             </div>
-          </div>
+          </Link>
           {/* Email Contact Box */}
-          <div className="flex items-center justify-center bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 h-[150px]">
+          <Link className="flex items-center justify-center bg-gray-100 p-6 rounded-2xl w-full lg:w-1/3 h-[150px] hover:bg-gray-200"
+          href='mailto:sjdexteriorcleaningRRLTD@gmail.com'>
             <div className="flex flex-col items-center justify-center w-full">
               <MdEmail className="text-4xl text-indigo-600 flex-shrink-0" />
               <div className="flex flex-col items-center w-full">
@@ -44,7 +47,7 @@ const Page = () => {
                 </h1>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
