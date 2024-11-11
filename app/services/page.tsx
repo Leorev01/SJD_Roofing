@@ -38,7 +38,7 @@ const Services = () => {
           Our Services
         </h2>
         <p className="mt-4 text-lg text-gray-600">
-          Providing high-quality roofing and cleaning solutions to enhance your home's durability and appearance.
+          Providing high-quality roofing and cleaning solutions to enhance your home&apos;s durability and appearance.
         </p>
       </div>
 
