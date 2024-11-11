@@ -111,7 +111,7 @@ const testimonials = {
     ],
   };
 
-const team = [
+/*const team = [
   {
     name: 'Shane Dowey',
     role: 'Director',
@@ -119,7 +119,7 @@ const team = [
       'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   // More people...
-]
+]*/
 
 export default function Example() {
 
@@ -305,7 +305,7 @@ export default function Example() {
         </div>
 
         {/* Team section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
+        {/*<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our team</h2>
             <p className="mt-6 text-lg/8 text-gray-600">
@@ -325,7 +325,7 @@ export default function Example() {
               </li>
             ))}
           </ul>
-        </div>
+        </div>*/}
 
         {/* Testimonials section */}
         <div className="bg-white py-16">
