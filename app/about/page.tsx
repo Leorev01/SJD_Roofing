@@ -233,7 +233,7 @@ export default function Example() {
                 Our mission is to provide top-quality roofing repairs, re-roofs, and exterior cleaning services that are reliable, affordable, and exceed customer expectations. We pride ourselves on our 5-star reviews, 15-year warranty on all re-roofs, and our commitment to ensuring every customer is satisfied before we leave the job site.
                 </p>
                 <p className="mt-8 max-w-xl text-lg text-gray-600">
-                We believe that a happy customer means a happy business. With over 10 years of experience as a family-run company, we offer fast and efficient services with no upfront payments required. Whether it&apos;s roof cleaning, driveway pressure washing, or loft insulation, we're here to help improve the look and value of your home.
+                We believe that a happy customer means a happy business. With over 10 years of experience as a family-run company, we offer fast and efficient services with no upfront payments required. Whether it&apos;s roof cleaning, driveway pressure washing, or loft insulation, we&apos;re here to help improve the look and value of your home.
                 </p>
                 <div className="mt-8">
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
