@@ -1,23 +1,52 @@
-const stats = [
-    { id: 1, name: 'Years in business', value: '10+' },
-    { id: 2, name: 'Happy Clients', value: '1000+' },
-    { id: 3, name: 'Projects Completed', value: '1000+' },
-  ]
-  
-  export default function Example() {
-    return (
-      <div className="bg-gray-900 py-24 w-[80vw] mx-[10vw]">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-            {stats.map((stat) => (
-              <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt className="text-base/7 text-gray-400">{stat.name}</dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">{stat.value}</dd>
-              </div>
-            ))}
-          </dl>
+import Image from "next/image";
+import rooferImage from "../public/images/roofer.jpg";
+import cleanerImage from "../public/images/cleaner.webp";
+
+export default function Example() {
+  return (
+    <div className="bg-white py-24 sm:py-32 mt-[-5rem]">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        
+        {/* Roofing Section */}
+        <div className="flex flex-col items-center lg:flex-row lg:items-start mb-16">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:mr-12 text-center lg:text-left">
+            <p className="text-base font-semibold text-indigo-600">About Us</p>
+            <h2 className="mt-2 text-5xl font-semibold tracking-tight text-gray-900">
+              Professional Roofing Contractors Coventry
+            </h2>
+            <p className="mt-8 text-lg font-medium text-gray-500">
+              Looking for expert roofing services in Coventry? Look no further! Our team of experienced roofers provides top-quality roof installation, repairs, and maintenance for homes and businesses throughout Coventry and the surrounding areas.
+            </p>
+          </div>
+          <Image
+            src={rooferImage}
+            alt="Roofer"
+            className="mt-12 lg:mt-0 lg:ml-20 lg:w-[500px] rounded-lg hover:shadow-lg transform hover:scale-105 transition duration-500 ease-in-out"
+            width={300}
+            height={300}
+          />
         </div>
+
+        {/* Exterior Cleaners Section */}
+        <div className="flex flex-col items-center lg:flex-row lg:items-start">
+          <Image
+            src={cleanerImage}
+            alt="Exterior Cleaners"
+            className="mt-12 lg:mt-0 lg:mr-12 lg:w-[500px] rounded-lg hover:shadow-lg transform hover:scale-105 transition duration-500 ease-in-out"
+            width={300}
+            height={300}
+          />
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:ml-12 text-center lg:text-left">
+            <h2 className="text-5xl font-semibold tracking-tight text-gray-900">
+              Trusted Exterior Cleaners Coventry
+            </h2>
+            <p className="mt-8 text-lg font-medium text-gray-500">
+              Keep your property looking its best with our professional exterior cleaning services in Coventry. Our skilled team specializes in cleaning roofs, driveways, facades, and gutters, ensuring a spotless appearance and protecting your investment. Using advanced techniques and eco-friendly products, we deliver exceptional results for residential and commercial properties alike.
+            </p>
+          </div>
+        </div>
+
       </div>
-    )
-  }
-  
+    </div>
+  );
+}

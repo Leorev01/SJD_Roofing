@@ -1,7 +1,7 @@
-'use client';
-
-import { useState } from 'react';
-import { StarIcon } from '@heroicons/react/20/solid';
+'use client'
+// Reviews.tsx
+import { useState } from 'react'
+import { StarIcon } from '@heroicons/react/20/solid'
 
 const reviews = {
   average: 5,
@@ -75,33 +75,62 @@ const reviews = {
       `,
       author: 'Angela Spokes',
     },
+    {
+      id: 5,
+      rating: 5,
+      content: `
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheryl.brennan.5099%2Fposts%2Fpfbid0R8z4L5BGNFidTHqLAZsVKNMzwi5MLKtkwuwEBTi57kas98yGQWRS33xwJcPFedPgl&show_text=true&width=500"
+        width="500"
+        height="250"
+        style="border:none;overflow:hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      `,
+      author: 'Cheryl Brennan',
+    },
+    {
+      id: 6,
+      rating: 5,
+      content: `
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjade.bullock.16%2Fposts%2Fpfbid02wLw1p3jfqkyMkZ7DYxdXww6Qq8sx1ojCfRvPMZjGQAUTKKGvYDChAedVTSHFnJkyl&show_text=true&width=500"
+        width="500"
+        height="250"
+        style="border:none;overflow:hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      `,
+      author: 'Jade Bullock',
+    }
   ],
 };
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const reviewsPerSlide = 2;
+export default function Reviews() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const reviewsPerSlide = 1
 
   const nextSlide = () => {
     if (currentIndex + reviewsPerSlide < reviews.featured.length) {
-      setCurrentIndex((prevIndex) => prevIndex + reviewsPerSlide);
+      setCurrentIndex((prevIndex) => prevIndex + reviewsPerSlide)
     }
-  };
+  }
 
   const prevSlide = () => {
     if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - reviewsPerSlide);
+      setCurrentIndex((prevIndex) => prevIndex - reviewsPerSlide)
     }
-  };
+  }
 
   return (
     <div className="bg-white py-16">
       <h1 className="text-3xl font-bold text-center mb-8">Our Customers Love Us</h1>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center gap-8 overflow-hidden">
           {reviews.featured.slice(currentIndex, currentIndex + reviewsPerSlide).map((review) => (
@@ -115,7 +144,7 @@ export default function Example() {
                       aria-hidden="true"
                       className={classNames(
                         review.rating > rating ? 'text-yellow-400' : 'text-gray-300',
-                        'h-5 w-5 shrink-0'
+                        'h-5 w-5'
                       )}
                     />
                   ))}
@@ -134,6 +163,7 @@ export default function Example() {
           ))}
         </div>
 
+        {/* Navigation buttons */}
         <button
           onClick={prevSlide}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-gray-800 p-2 rounded-full shadow-md"
@@ -148,5 +178,5 @@ export default function Example() {
         </button>
       </div>
     </div>
-  );
+  )
 }

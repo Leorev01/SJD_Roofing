@@ -1,3 +1,4 @@
+'use client'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaFacebook, FaPhone, FaWhatsapp } from 'react-icons/fa';
@@ -6,8 +7,18 @@ import { MdEmail } from "react-icons/md";
 import mainLogo from '../public/images/main-logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Use usePathname instead of useRouter
 
 export default function Example() {
+  const pathname = usePathname(); // Get the current route path using usePathname
+
+  // Function to apply the active class to the link
+  const getLinkClass = (path: string) => {
+    return pathname === path
+      ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+      : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700";
+  };
+
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {/* Top bar with logo and contact info */}
@@ -19,20 +30,20 @@ export default function Example() {
 
         {/* Contact info: Only visible on large screens */}
         <div className="hidden lg:flex items-center space-x-8">
-          <div className="flex items-center space-x-4 p-6 rounded-2xl">
+          <Link className="flex items-center space-x-4 p-6 rounded-2xl" href='tel:0786 480 8832'>
             <FaMobileButton className="text-4xl text-indigo-600" />
             <div>
               <h1 className="font-bold text-lg lg:text-2xl">Mobile</h1>
               <h1 className="font-bold text-2xl lg:text-4xl">0786 480 8832</h1>
             </div>
-          </div>
-          <div className="flex items-center space-x-4 p-6 rounded-2xl">
+          </Link>
+          <Link className="flex items-center space-x-4 p-6 rounded-2xl" href='tel:0333 880 0209'>
             <FaPhone className="text-4xl text-indigo-600" />
             <div>
               <h1 className="font-bold text-lg lg:text-2xl">Landline</h1>
               <h1 className="font-bold text-2xl lg:text-4xl">0333 880 0209</h1>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -51,11 +62,11 @@ export default function Example() {
           {/* Logo and Links for larger screens */}
           <div className="flex flex-1 items-center justify-start">
             <div className="hidden sm:flex sm:space-x-8">
-              <Link href="/" className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900">Home</Link>
-              <Link href="/about" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">About</Link>
-              <Link href="/projects" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Projects</Link>
-              <Link href="/services" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Services</Link>
-              <Link href="/contact" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Contact Us</Link>
+              <Link href="/" className={getLinkClass("/")}>Home</Link>
+              <Link href="/about" className={getLinkClass("/about")}>About</Link>
+              <Link href="/projects" className={getLinkClass("/projects")}>Projects</Link>
+              <Link href="/services" className={getLinkClass("/services")}>Services</Link>
+              <Link href="/contact" className={getLinkClass("/contact")}>Contact Us</Link>
             </div>
           </div>
 

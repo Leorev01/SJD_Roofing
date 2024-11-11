@@ -2,7 +2,7 @@ import { FaPhone, FaPoundSign } from "react-icons/fa";
 import { GiRibbonMedal } from "react-icons/gi";
 
 const stats = [
-    { id: 1, name: 'Competitive Pricing', icon: <FaPoundSign /> },
+    { id: 1, name: 'No Upfront Payments', icon: <FaPoundSign /> },
     { id: 2, name: 'Fully Insured', icon: <GiRibbonMedal /> },
     { id: 3, name: 'Quick Responses', icon: <FaPhone /> },
   ]
