@@ -2,73 +2,48 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
-  // Add CORS headers
-  const responseHeaders = new Headers();
-  responseHeaders.append('Access-Control-Allow-Origin', '*'); // Allow all origins (or specify your frontend URL if needed)
-  responseHeaders.append('Access-Control-Allow-Methods', 'POST');
-  responseHeaders.append('Access-Control-Allow-Headers', 'Content-Type');
-
   try {
-    // Check if it's a preflight request (OPTIONS)
-    if (req.method === 'OPTIONS') {
-      return new NextResponse(null, {
-        status: 200,
-        headers: responseHeaders,
-      });
-    }
+    // Parse the request body
+    const { name, email, phoneNumber, message } = await req.json();
 
-    // Parse the incoming request JSON data
-    const { name, email, phone, message } = await req.json();
-
-    // Log received data for debugging
-    console.log('Received data:', { name, email, message });
-
-    // Validate input fields
     if (!name || !email || !message) {
-      return new NextResponse(
-        JSON.stringify({ error: 'All fields are required' }),
-        { status: 400, headers: responseHeaders }
+      return NextResponse.json(
+        { error: 'Name, email, and message are required.' },
+        { status: 400 }
       );
     }
 
-    // Set up Nodemailer transporter
+    // Create a transporter object using SMTP transport
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
+
+    // Verify connection configuration (optional but useful for debugging)
+    await transporter.verify();
 
     // Define email options
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      replyTo: email,
       to: 'revrennaleo@gmail.com',
       subject: `New contact message from ${name}`,
-      html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
+      text: `You have a new message:\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nMessage: ${message}`,
     };
 
-    // Send email
+    // Send the email
     await transporter.sendMail(mailOptions);
 
-    // Return a successful response
-    return new NextResponse(
-      JSON.stringify({ message: 'Your message has been sent!' }),
-      { status: 200, headers: responseHeaders }
-    );
-
-  } catch (error) {
-    console.error('Error sending email:', error);
-
-    return new NextResponse(
-      JSON.stringify({ error: 'There was an error sending your message' }),
-      { status: 500, headers: responseHeaders }
+    // Return a success response
+    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    console.error('Error sending email:', error.message);
+    return NextResponse.json(
+      { error: error.message || 'Failed to send email. Please try again later.' },
+      { status: 500 }
     );
   }
 }
