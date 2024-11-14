@@ -2,37 +2,68 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
-  try {
-    // Parse the request body
-    const { name, email, phoneNumber, message } = await req.json();
+  const responseHeaders = new Headers();
+  responseHeaders.append('Access-Control-Allow-Origin', '*');
+  responseHeaders.append('Access-Control-Allow-Methods', 'POST');
+  responseHeaders.append('Access-Control-Allow-Headers', 'Content-Type');
 
-    // Create a transporter object using SMTP transport
+  try {
+    if (req.method === 'OPTIONS') {
+      return new NextResponse(null, { status: 200, headers: responseHeaders });
+    }
+
+    // Parse the incoming request JSON data
+    const { name, email, phone, message } = await req.json();
+
+    // Log received data for debugging
+    console.log('Received data:', { name, email, phone, message });
+
+    if (!name || !email || !message || !phone) {
+      console.error('Missing required fields:', { name, email, phone, message });
+      return new NextResponse(
+        JSON.stringify({ error: 'All fields are required' }),
+        { status: 400, headers: responseHeaders }
+      );
+    }
+
+    // Set up the email transporter
     const transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
       },
     });
 
-    // Define email options
     const mailOptions = {
-      from: email,
+      from: process.env.EMAIL_USER,
+      replyTo: email,
       to: 'revrennaleo@gmail.com',
       subject: `New contact message from ${name}`,
-      text: `You have a new message:\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nMessage: ${message}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `,
     };
+
+    // Log mail options for debugging
+    console.log('Sending email with options:', mailOptions);
 
     // Send the email
     await transporter.sendMail(mailOptions);
 
-    // Return a success response
-    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+    return new NextResponse(
+      JSON.stringify({ message: 'Your message has been sent!' }),
+      { status: 200, headers: responseHeaders }
+    );
   } catch (error) {
-    console.error('Error sending email:', error);
-    return NextResponse.json(
-      { error: 'Failed to send email. Please try again later.' },
-      { status: 500 }
+    console.error('Error in API handler:', error);
+
+    return new NextResponse(
+      JSON.stringify({ error: 'There was an error sending your message' }),
+      { status: 500, headers: responseHeaders }
     );
   }
 }

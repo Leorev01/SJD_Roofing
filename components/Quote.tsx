@@ -5,7 +5,7 @@ export default function ContactForm() {
   // State for form fields
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phone, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
 
   // State for form status
@@ -21,7 +21,7 @@ export default function ContactForm() {
     setErrorMessage('');
 
     // Prepare the data to send
-    const formData = { name, email, phoneNumber, message };
+    const formData = { name, email, phone, message };
 
     try {
       const response = await fetch('/api/contact', {
@@ -106,16 +106,16 @@ export default function ContactForm() {
             {/* Phone Number Field */}
             <div>
               <label
-                htmlFor="phone-number"
+                htmlFor="phone"
                 className="block text-sm font-semibold text-white"
               >
                 Phone Number
               </label>
               <input
-                id="phone-number"
-                name="phone-number"
+                id="phone"
+                name="phone"
                 type="tel"
-                value={phoneNumber}
+                value={phone}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 className="mt-1 block w-full rounded-md bg-white/10 px-2 py-1 text-white text-sm shadow-sm focus:ring-2 focus:ring-indigo-500"
               />
