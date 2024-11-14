@@ -24,7 +24,7 @@ export default function ContactForm() {
     const formData = { name, email, phoneNumber, message };
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://roofer-website-5r75wh5t4-leorev01s-projects.vercel.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
