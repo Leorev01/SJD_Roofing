@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { useState } from 'react';
 
 export default function ContactForm() {
@@ -14,7 +14,7 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('');
 
   // Handle form submission
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSuccessMessage('');
@@ -38,8 +38,10 @@ export default function ContactForm() {
         setEmail('');
         setPhoneNumber('');
         setMessage('');
+        // Display success message
         setSuccessMessage('Your message was sent successfully!');
       } else {
+        // Display error message if something goes wrong
         const errorData = await response.json();
         setErrorMessage(
           errorData.error || 'Something went wrong. Please try again later.'
@@ -47,96 +49,122 @@ export default function ContactForm() {
       }
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      setErrorMessage('Failed to send message. Please check your internet connection and try again.');
+      setErrorMessage('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="relative isolate bg-gray-900 w-full max-w-3xl mx-auto rounded-lg p-6">
-      <h2 className="text-2xl font-semibold tracking-tight text-white mb-6">
-        Get a Quote
-      </h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-white">
-            Full Name
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="mt-1 block w-full rounded-md bg-white/10 px-3 py-2 text-white text-sm focus:ring-2 focus:ring-indigo-500"
-          />
+    <div className="relative isolate bg-gray-900 w-full max-w-3xl mx-auto rounded-lg p-4">
+      <div className="grid grid-cols-1 gap-y-4">
+        <div className="relative px-4 pt-6 pb-4">
+          <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            Get a Quote
+          </h2>
         </div>
+        <form onSubmit={handleSubmit} className="px-4 pb-4">
+          <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-4">
+            {/* Full Name Field */}
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-semibold text-white"
+              >
+                Full Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="mt-1 block w-full rounded-md bg-white/10 px-2 py-1 text-white text-sm shadow-sm focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
 
-        <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-white">
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="mt-1 block w-full rounded-md bg-white/10 px-3 py-2 text-white text-sm focus:ring-2 focus:ring-indigo-500"
-          />
-        </div>
+            {/* Email Field */}
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-white"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="mt-1 block w-full rounded-md bg-white/10 px-2 py-1 text-white text-sm shadow-sm focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
 
-        <div>
-          <label htmlFor="phoneNumber" className="block text-sm font-semibold text-white">
-            Phone Number
-          </label>
-          <input
-            id="phoneNumber"
-            name="phoneNumber"
-            type="tel"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            className="mt-1 block w-full rounded-md bg-white/10 px-3 py-2 text-white text-sm focus:ring-2 focus:ring-indigo-500"
-          />
-        </div>
+            {/* Phone Number Field */}
+            <div>
+              <label
+                htmlFor="phone-number"
+                className="block text-sm font-semibold text-white"
+              >
+                Phone Number
+              </label>
+              <input
+                id="phone-number"
+                name="phone-number"
+                type="tel"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className="mt-1 block w-full rounded-md bg-white/10 px-2 py-1 text-white text-sm shadow-sm focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
 
-        <div>
-          <label htmlFor="message" className="block text-sm font-semibold text-white">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows={4}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-            className="mt-1 block w-full rounded-md bg-white/10 px-3 py-2 text-white text-sm focus:ring-2 focus:ring-indigo-500"
-          />
-        </div>
+            {/* Message Field */}
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-semibold text-white"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={3}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                className="mt-1 block w-full rounded-md bg-white/10 px-2 py-1 text-white text-sm shadow-sm focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full rounded-md bg-indigo-600 hover:bg-indigo-500 px-4 py-2 text-sm font-semibold text-white"
-        >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
-        </button>
-      </form>
+            {/* Submit Button */}
+            <div className="sm:col-span-2 flex justify-end">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+            </div>
+          </div>
+        </form>
 
-      {successMessage && (
-        <p className="text-green-500 text-sm font-semibold mt-4 text-center">
-          {successMessage}
-        </p>
-      )}
-      {errorMessage && (
-        <p className="text-red-500 text-sm font-semibold mt-4 text-center">
-          {errorMessage}
-        </p>
-      )}
+        {/* Success/Error Messages */}
+        {successMessage && (
+          <p className="text-green-500 text-sm font-semibold text-center mt-4">
+            {successMessage}
+          </p>
+        )}
+        {errorMessage && (
+          <p className="text-red-500 text-sm font-semibold text-center mt-4">
+            {errorMessage}
+          </p>
+        )}
+      </div>
     </div>
   );
 }
