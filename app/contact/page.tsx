@@ -1,4 +1,4 @@
-import Quote from '@/components/Quote';
+import Quote from './components/Quote';
 import Link from 'next/link';
 import { FaMobileButton } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa";
