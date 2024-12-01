@@ -33,15 +33,15 @@ export default function Example() {
           <Link className="flex items-center space-x-4 p-6 rounded-2xl" href='tel:0786 480 8832'>
             <FaMobileButton className="text-4xl text-indigo-600" />
             <div>
-              <h1 className="font-bold text-lg lg:text-2xl">Mobile</h1>
-              <h1 className="font-bold text-2xl lg:text-4xl">0786 480 8832</h1>
+              <p className="font-bold text-lg lg:text-2xl">Mobile</p>
+              <p className="font-bold text-2xl lg:text-4xl">0786 480 8832</p>
             </div>
           </Link>
           <Link className="flex items-center space-x-4 p-6 rounded-2xl" href='tel:0333 880 0209'>
             <FaPhone className="text-4xl text-indigo-600" />
             <div>
-              <h1 className="font-bold text-lg lg:text-2xl">Landline</h1>
-              <h1 className="font-bold text-2xl lg:text-4xl">0333 880 0209</h1>
+              <p className="font-bold text-lg lg:text-2xl">Landline</p>
+              <p className="font-bold text-2xl lg:text-4xl">0333 880 0209</p>
             </div>
           </Link>
         </div>
