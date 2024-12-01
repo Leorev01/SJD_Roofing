@@ -15,9 +15,9 @@ const stats = [
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-row gap-x-4">
                 <span className="bg-white font-black text-6xl rounded-full p-4 w-fit">{stat.icon}</span>
-                <h1 className="text-3xl font-semibold tracking-tight text-white self-center">
+                <h2 className="text-3xl font-semibold tracking-tight text-white self-center">
                   {stat.name}
-                </h1>
+                </h2>
               </div>
             ))}
           </dl>
