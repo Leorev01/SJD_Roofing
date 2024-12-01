@@ -1,4 +1,3 @@
-import { StarIcon } from '@heroicons/react/24/solid'
 import drivewayCleaning from '@/public/images/driveway-cleaning.jpg'
 import exteriorCleaning from '@/public/images/exterior-cleaning.jpg'
 import roofRepair from '@/public/images/roof-repair.webp'
