@@ -37,9 +37,9 @@ export default function Example() {
             height={300}
           />
           <div className="mx-auto max-w-2xl lg:mx-0 lg:ml-12 text-center lg:text-left">
-            <h1 className="text-5xl font-semibold tracking-tight text-gray-900">
+            <h2 className="text-5xl font-semibold tracking-tight text-gray-900">
               Trusted Exterior Cleaners Coventry
-            </h1>
+            </h2>
             <h3 className="mt-8 text-lg font-medium text-gray-500">
               Keep your property looking its best with our professional exterior cleaning services in Coventry. Our skilled team specializes in cleaning roofs, driveways, facades, and gutters, ensuring a spotless appearance and protecting your investment. Using advanced techniques and eco-friendly products, we deliver exceptional results for residential and commercial properties alike.
             </h3>
