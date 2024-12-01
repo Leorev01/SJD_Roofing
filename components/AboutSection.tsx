@@ -11,12 +11,12 @@ export default function Example() {
         <div className="flex flex-col items-center lg:flex-row lg:items-start mb-16">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:mr-12 text-center lg:text-left">
             <p className="text-base font-semibold text-indigo-600">About Us</p>
-            <h2 className="mt-2 text-5xl font-semibold tracking-tight text-gray-900">
+            <h1 className="mt-2 text-5xl font-semibold tracking-tight text-gray-900">
               Professional Roofing Contractors Coventry
-            </h2>
-            <p className="mt-8 text-lg font-medium text-gray-500">
+            </h1>
+            <h3 className="mt-8 text-lg font-medium text-gray-500">
               Looking for expert roofing services in Coventry? Look no further! Our team of experienced roofers provides top-quality roof installation, repairs, and maintenance for homes and businesses throughout Coventry and the surrounding areas.
-            </p>
+            </h3>
           </div>
           <Image
             src={rooferImage}
@@ -37,12 +37,12 @@ export default function Example() {
             height={300}
           />
           <div className="mx-auto max-w-2xl lg:mx-0 lg:ml-12 text-center lg:text-left">
-            <h2 className="text-5xl font-semibold tracking-tight text-gray-900">
+            <h1 className="text-5xl font-semibold tracking-tight text-gray-900">
               Trusted Exterior Cleaners Coventry
-            </h2>
-            <p className="mt-8 text-lg font-medium text-gray-500">
+            </h1>
+            <h3 className="mt-8 text-lg font-medium text-gray-500">
               Keep your property looking its best with our professional exterior cleaning services in Coventry. Our skilled team specializes in cleaning roofs, driveways, facades, and gutters, ensuring a spotless appearance and protecting your investment. Using advanced techniques and eco-friendly products, we deliver exceptional results for residential and commercial properties alike.
-            </p>
+            </h3>
           </div>
         </div>
 
