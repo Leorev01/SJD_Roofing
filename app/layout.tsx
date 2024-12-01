@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "SJD Exterior cleaning and roofing",
     description: "We provide quality services and products to our clients.",
-    url: "https://www.yourdomain.com", // Replace with your website URL
+    url: "https://www.sjdroofing.com", // Replace with your website URL
     images: [logoPath], // Use the path to the image in the public folder
   },
 };
