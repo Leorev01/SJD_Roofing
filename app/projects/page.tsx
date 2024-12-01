@@ -8,7 +8,6 @@ const projects = [
   {
     id: 1,
     title: 'Driveway & Exterior Cleaning',
-    date: '24 October',
     description: 'Brightened up a dull driveway in the Sharnford/Hinckley area.',
     details: 'Transformed a newly done driveway that left the house looking dull. Achieved a much cleaner, brighter look without any mess or unwanted paint marks. Fast, reliable service with affordable prices, leaving a happy customer!',
     image: '/images/projects/driveway-clean.jpg',
@@ -16,7 +15,6 @@ const projects = [
   {
     id: 2,
     title: 'Roof Underlay & Felt Replacement',
-    date: '22 October',
     description: 'Fixed a leaking roof in Stoney Stanton with no prior underlay.',
     details: 'Removed old, damaged felt and applied new underlay correctly. Added black torch-on felt, ensuring everything was fitted and sealed to the wall. All waste removed from the property. Fast and reliable roofing service!',
     image: '/images/projects/felt-repair.jpg',
@@ -24,7 +22,6 @@ const projects = [
   {
     id: 3,
     title: 'Moss Removal & Gutter Cleaning',
-    date: '4 October',
     description: 'Removed moss from a roof and cleared blocked gutters and downpipes.',
     details: 'The customer was experiencing moss buildup causing blockages in the garden, guttering, and downpipes. We scraped off all the moss, cleaned out the gutters, and unblocked the downpipes. Fast and reliable service with high-quality work!',
     image: '/images/projects/moss-removal.jpg',
@@ -32,7 +29,6 @@ const projects = [
   {
     id: 4,
     title: 'Gutter Cleaning & Blockage Prevention',
-    date: '23 September',
     description: 'Helping with all gutter cleaning needs to prevent major issues.',
     details: 'Blocked gutters can lead to severe damage to your property. We conducted a thorough internal gutter cleaning to ensure free water flow, preventing leaks and water damage.',
     image: '/images/projects/gutter-cleaning.jpg',
@@ -40,7 +36,6 @@ const projects = [
   {
     id: 5,
     title: 'Roof Repairs & Exterior Cleaning',
-    date: '18 September',
     description: 'A busy week of roof repairs and exterior cleaning!',
     details: 'This week, we handled slipped tiles correction, re-bedding ridges, and tile replacements. Ensured everything was sealed and cleaned for a fresh look.',
     image: '/images/projects/roof-repair.jpg',
@@ -48,7 +43,6 @@ const projects = [
   {
     id: 6,
     title: 'Leaking Roof Repair',
-    date: '4 September',
     description: 'Comprehensive repair for a leaking roof using quality materials.',
     details: 'Applied an underlay, black charcoal waterproof felt, and sealed the surrounding areas to ensure a long-lasting, leak-proof solution. Client satisfaction guaranteed!',
     image: '/images/projects/leaking-roof.jpg',
@@ -59,7 +53,6 @@ const Projects = () => {
   type Project = {
     id: number;
     title: string;
-    date: string;
     description: string;
     details: string;
     image: string;
@@ -112,7 +105,6 @@ const Projects = () => {
                 <div className="text-center px-4">
                   <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                   <p className="mt-2 text-white">{project.description}</p>
-                  <p className="mt-1 text-sm text-gray-200">{project.date}</p>
                 </div>
               </div>
             </div>
@@ -152,7 +144,6 @@ const Projects = () => {
             <div className="p-6">
               <h3 className="text-3xl font-bold text-gray-900">{selectedProject.title}</h3>
               <p className="mt-4 text-gray-700">{selectedProject.details}</p>
-              <p className="mt-2 text-gray-500">Date: {selectedProject.date}</p>
             </div>
           </div>
         </div>
