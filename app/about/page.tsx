@@ -3,123 +3,9 @@ import drivewayCleaning from '@/public/images/driveway-cleaning.jpg'
 import exteriorCleaning from '@/public/images/exterior-cleaning.jpg'
 import roofRepair from '@/public/images/roof-repair.webp'
 import happyCustomer from '@/public/images/happy-customer.jpg'
+import Reviews from '@/components/Reviews'
 import Link from 'next/link'
 import Image from 'next/image'
-
-const testimonials = {
-    average: 5,
-    totalCount: 1,
-    counts: [
-      { rating: 5, count: 1 },
-    ],
-    featured: [
-      {
-        id: 1,
-        rating: 5,
-        content: `
-          <iframe 
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsarah.clarke.7777%2Fposts%2Fpfbid02wHDaVTA2kvVyLYGsZyS1uoZR7pqEUfJVpEX9PDzR7yeNohUy1JAHjL4CWDAQegSHl&show_text=true&width=500"
-            width="100%" 
-            height="300" 
-            style="border:none;overflow:hidden" 
-            scrolling="no" 
-            frameborder="0" 
-            allowfullscreen="true" 
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-          </iframe>
-        `,
-        author: 'Sarah Clarke',
-      },
-      {
-        id: 2,
-        rating: 5,
-        content: `
-          <iframe
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Flaura.harper.129357%2Fposts%2Fpfbid02c6FumJHuapC61ZxTBfmzNAjnG2LiB4NmgfMueogRz87KLb9RR2fDmJq5tmnRWV8Wl&show_text=true&width=500"
-              width="100%" 
-              height="300"
-              style="border:none;overflow:hidden"
-              scrolling="no"
-              frameborder="0"
-              allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-          </iframe>
-        `,
-        author: 'Laura Turner',
-      },
-      {
-        id: 3,
-        rating: 5,
-        content: `
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkeri.rose1%2Fposts%2Fpfbid02EcwBeH3qPPHHJcURXgeMgeq1LEZ9be4kewc5YAaNjZuBR2HLAfBxQQmWe3cz45ySl&show_text=true&width=500"
-              width="100%"
-              height="250"
-              style="border:none;overflow:hidden"
-              scrolling="no"
-              frameborder="0"
-              allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-          </iframe>
-        `,
-        author: 'Keri Rose',
-      },
-      {
-        id: 4,
-        rating: 5,
-        content: `
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fangela.spokes%2Fposts%2Fpfbid0EodyC8GoxbjxvPogCpBukrG1GJzn3PZm5MhaU13TUyCSEA9z3kBKnfTuWCwMk7Aal&show_text=true&width=500"
-          width="100%"
-          height="250"
-          style="border:none;overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        `,
-        author: 'Angela Spokes',
-      },
-      {
-        id: 5,
-        rating: 5,
-        content: `
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheryl.brennan.5099%2Fposts%2Fpfbid0R8z4L5BGNFidTHqLAZsVKNMzwi5MLKtkwuwEBTi57kas98yGQWRS33xwJcPFedPgl&show_text=true&width=500"
-          width="500"
-          height="250"
-          style="border:none;overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        `,
-        author: 'Cheryl Brennan',
-      },
-      {
-        id: 6,
-        rating: 5,
-        content: `
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjade.bullock.16%2Fposts%2Fpfbid02wLw1p3jfqkyMkZ7DYxdXww6Qq8sx1ojCfRvPMZjGQAUTKKGvYDChAedVTSHFnJkyl&show_text=true&width=500"
-          width="500"
-          height="250"
-          style="border:none;overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        `,
-        author: 'Jade Bullock',
-      }
-    ],
-  };
-
-/*const team = [
-  {
-    name: 'Shane Dowey',
-    role: 'Director',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  // More people...
-]*/
 
 export default function Example() {
 
@@ -333,31 +219,7 @@ export default function Example() {
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Customer Testimonials
                 </h2>
-                <div className="mt-12 grid gap-16 lg:grid-cols-2">
-                {testimonials.featured.map((testimonial) => (
-                    <div key={testimonial.id} className="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <div className="flex items-center mb-4">
-                        {/* Star Rating */}
-                        <div className="flex">
-                        {[...Array(5)].map((_, index) => (
-                            <StarIcon
-                            key={index}
-                            className="h-5 w-5 text-yellow-500"
-                            aria-hidden="true"
-                            />
-                        ))}
-                        </div>
-                    </div>
-                    <div
-                        className="mt-4"
-                        dangerouslySetInnerHTML={{ __html: testimonial.content }}
-                    />
-                    <p className="mt-4 text-lg font-medium text-gray-800">
-                        — {testimonial.author}
-                    </p>
-                    </div>
-                ))}
-                </div>
+                <Reviews />
             </div>
         </div>
 
