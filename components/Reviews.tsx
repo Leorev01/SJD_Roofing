@@ -130,7 +130,7 @@ export default function Reviews() {
 
   return (
     <div className="bg-white py-16">
-      <h1 className="text-3xl font-bold text-center mb-8">Our Customers Love Us</h1>
+      <h3 className="text-3xl font-bold text-center mb-8">Our Customers Love Us</h3>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center gap-8 overflow-hidden">
           {reviews.featured.slice(currentIndex, currentIndex + reviewsPerSlide).map((review) => (
