@@ -113,7 +113,7 @@ const reviews = {
       rating: 5,
       content: `
         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheryl.brennan.5099%2Fposts%2Fpfbid0R8z4L5BGNFidTHqLAZsVKNMzwi5MLKtkwuwEBTi57kas98yGQWRS33xwJcPFedPgl&show_text=true&width=500"
-          width="500"
+          width="100%"
           height="250"
           style="border:none;overflow:hidden"
           scrolling="no"
