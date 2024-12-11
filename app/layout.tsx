@@ -40,7 +40,8 @@ export default function RootLayout({
       <head>
         {/* Favicon Link */}
         <link rel="icon" href="/images/logo.png" type="image/png" />
-        <meta name="trustpilot-one-domain-verification-id=c7f2fb0b-4948-b594-33f47fb4a75a" />
+        <meta name="trustpilot-one-time-domain-verification-id" 
+        "content=c7f2fb0b-0dd6-4948-b594-33f47fb4a75a" />
         {/* Other metadata */}
       </head>
       <body
