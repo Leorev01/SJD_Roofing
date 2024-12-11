@@ -14,6 +14,38 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdanny.davis.77398%2Fposts%2Fpfbid02WmkyMabDZKfKuMmB1tNu9JwrpRtTDG3Bsa61gUDv7hWK11P7osHXTmjB7yB8hJWol&show_text=true&width=500"
+        width="500"
+        height="187"
+        style="border:none;overflow:hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
+      `,
+      author: 'Danny Davis',
+    },
+    {
+      id: 2,
+      rating: 5,
+      content: `
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjakerankine%2Fposts%2Fpfbid02giw9UgN7zcRrjGByzbfnE8nnepfpLL4oeVsqKJrBbtaJd6tfrg6s5K66Lj7DbeY5l&show_text=true&width=500"
+          width="500"
+          height="168"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      `,
+      author: 'Jake Rankine',
+    },
+    {
+      id: 3,
+      rating: 5,
+      content: `
         <iframe 
           src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsarah.clarke.7777%2Fposts%2Fpfbid02wHDaVTA2kvVyLYGsZyS1uoZR7pqEUfJVpEX9PDzR7yeNohUy1JAHjL4CWDAQegSHl&show_text=true&width=500"
           width="100%" 
@@ -28,7 +60,7 @@ const reviews = {
       author: 'Sarah Clarke',
     },
     {
-      id: 2,
+      id: 4,
       rating: 5,
       content: `
         <iframe
@@ -45,7 +77,7 @@ const reviews = {
       author: 'Laura Turner',
     },
     {
-      id: 3,
+      id: 5,
       rating: 5,
       content: `
         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkeri.rose1%2Fposts%2Fpfbid02EcwBeH3qPPHHJcURXgeMgeq1LEZ9be4kewc5YAaNjZuBR2HLAfBxQQmWe3cz45ySl&show_text=true&width=500"
@@ -61,50 +93,37 @@ const reviews = {
       author: 'Keri Rose',
     },
     {
-      id: 4,
+      id: 6,
       rating: 5,
       content: `
         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fangela.spokes%2Fposts%2Fpfbid0EodyC8GoxbjxvPogCpBukrG1GJzn3PZm5MhaU13TUyCSEA9z3kBKnfTuWCwMk7Aal&show_text=true&width=500"
-        width="100%"
-        height="250"
-        style="border:none;overflow:hidden"
-        scrolling="no"
-        frameborder="0"
-        allowfullscreen="true"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          width="100%"
+          height="250"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
       `,
       author: 'Angela Spokes',
     },
     {
-      id: 5,
+      id: 7,
       rating: 5,
       content: `
         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheryl.brennan.5099%2Fposts%2Fpfbid0R8z4L5BGNFidTHqLAZsVKNMzwi5MLKtkwuwEBTi57kas98yGQWRS33xwJcPFedPgl&show_text=true&width=500"
-        width="500"
-        height="250"
-        style="border:none;overflow:hidden"
-        scrolling="no"
-        frameborder="0"
-        allowfullscreen="true"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          width="500"
+          height="250"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
       `,
       author: 'Cheryl Brennan',
     },
-    {
-      id: 6,
-      rating: 5,
-      content: `
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjade.bullock.16%2Fposts%2Fpfbid02wLw1p3jfqkyMkZ7DYxdXww6Qq8sx1ojCfRvPMZjGQAUTKKGvYDChAedVTSHFnJkyl&show_text=true&width=500"
-        width="500"
-        height="250"
-        style="border:none;overflow:hidden"
-        scrolling="no"
-        frameborder="0"
-        allowfullscreen="true"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-      `,
-      author: 'Jade Bullock',
-    }
   ],
 };
 
@@ -130,7 +149,7 @@ export default function Reviews() {
 
   return (
     <div className="bg-white py-16">
-      <h3 className="text-3xl font-bold text-center mb-8">Our Customers Love Us</h3>
+      <h1 className="text-3xl font-bold text-center mb-8">Our Customers Love Us</h1>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center gap-8 overflow-hidden">
           {reviews.featured.slice(currentIndex, currentIndex + reviewsPerSlide).map((review) => (
