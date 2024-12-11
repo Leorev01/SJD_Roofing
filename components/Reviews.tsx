@@ -15,7 +15,7 @@ const reviews = {
       rating: 5,
       content: `
       <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdanny.davis.77398%2Fposts%2Fpfbid02WmkyMabDZKfKuMmB1tNu9JwrpRtTDG3Bsa61gUDv7hWK11P7osHXTmjB7yB8hJWol&show_text=true&width=500"
-        width="500"
+        width="100%"
         height="187"
         style="border:none;overflow:hidden"
         scrolling="no"
@@ -31,7 +31,7 @@ const reviews = {
       rating: 5,
       content: `
         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjakerankine%2Fposts%2Fpfbid02giw9UgN7zcRrjGByzbfnE8nnepfpLL4oeVsqKJrBbtaJd6tfrg6s5K66Lj7DbeY5l&show_text=true&width=500"
-          width="500"
+          width="100%"
           height="168"
           style="border:none;overflow:hidden"
           scrolling="no"
