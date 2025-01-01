@@ -6,7 +6,14 @@ import Link from 'next/link';
 // Projects array sorted by date (most recent first)
 const projects = [
   {
-    id: 10,
+  "id": 9,
+  "title": "Full Felt Roof Replacement",
+  "description": "Complete replacement of the felt roof with professional standards.",
+  "details": "In our last job of 2024, we carried out a full replacement of the felt roof. We applied an underlay and then a top coat of green felt. All work was burned down correctly, ensuring durability and longevity. We also removed all rubbish from the property, leaving it clean and tidy. Our customer was very happy with the results!",
+  "image": "/images/projects/felt-repair.jpg" // Update the image path as needed
+  },
+  {
+    id: 8,
     title: 'Expert Tile Replacement After Storm Damage',
     description: 'Replaced broken tiles due to storm damage.',
     details: `After a recent storm, we identified broken tiles that compromised the integrity of the roof. 
@@ -15,18 +22,7 @@ const projects = [
     image: '/images/projects/tile-replacement.jpg', // You can update the image path as needed
   },  
   {
-    id: 9,
-    title: 'Roof Underlay & Felt Replacement',
-    description: 'Fixed a leaking roof in Stoney Stanton with no prior underlay.',
-    details: `Recently, we completed a felt replacement job for a customer experiencing dampness in their property. 
-              The roof lacked proper underlay and was not sealed correctly into the wall, leading to moisture issues. 
-              We removed the old felt and installed a new underlay, followed by a top felt burn-on in green. 
-              All waste was meticulously removed from the property, ensuring a clean finish. 
-              A happy customer means a happy business!`,
-    image: '/images/projects/felt-repair.jpg',
-  },
-  {
-    id: 8,
+    id: 7,
     title: 'Roof Cleaning Service',
     description: 'Thorough roof cleaning to remove moss and debris.',
     details: `Today, we provided a comprehensive roof cleaning service, removing all moss and debris. 
@@ -41,7 +37,7 @@ const projects = [
     image: '/images/projects/roof-cleaning.jpg', // Update the image path as needed
   },
   {
-    id: 7,
+    id: 6,
     title: 'Breathable Membrane Installation',
     description: 'Repaired felt issues by installing a breathable membrane.',
     details: `Today, we addressed a customer’s roof with holes in the felt. 
@@ -56,7 +52,7 @@ const projects = [
     image: '/images/projects/breathable-membrane.jpg', // Update the image path as needed
   },
   {
-    id: 6,
+    id: 5,
     title: 'Roof Leak Repair in Stoney Stanton',
     description: 'Addressed a leak by installing proper underlay and felt.',
     details: `Today in Stoney Stanton, we addressed a customer's leak and discovered there was no underlay at all, with holes in places too. 
@@ -73,7 +69,7 @@ const projects = [
     image: '/images/projects/felt-repair-2.jpg', // Update the image path as needed
   },
   {
-    id: 5,
+    id: 4,
     title: 'Driveway & Exterior Cleaning',
     description: 'Brightened up a dull driveway in the Sharnford/Hinckley area.',
     details: 'Transformedat left the house looking dull. Achieved a much cleaner, brighter look without any mess or unwanted paint marks. Fast, reliable service with affordable prices, leaving a happy customer!',
@@ -81,32 +77,25 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 3,
     title: 'Moss Removal & Gutter Cleaning',
     description: 'Removed moss from a roof and cleared blocked gutters and downpipes.',
     details: 'The customer was experiencing moss buildup causing blockages  and downpipes. We scraped off all the moss, cleaned out the gutters, and unblocked the downpipes. Fast and reliable service with high-quality work!',
     image: '/images/projects/moss-removal.jpg',
   },
   {
-    id: 3,
+    id: 2,
     title: 'Gutter Cleaning & Blockage Prevention',
     description: 'Helping with all gutter cleaning needs to prevent major issues.',
     details: 'Blocked gutters can lead to severe damage to your property. We conducted a thorough in ensure free water flow, preventing leaks and water damage.',
     image: '/images/projects/gutter-cleaning.jpg',
   },
   {
-    id: 2,
+    id: 1,
     title: 'Roof Repairs & Exterior Cleaning',
     description: 'A busy week of roof repairs and exterior cleaning!',
     details: 'This week, we handled slipped tiles correction, re-bedding ridges, and tile replacements. Ensured everything waa fresh look.',
     image: '/images/projects/roof-repair.jpg',
-  },
-  {
-    id: 1,
-    title: 'Leaking Roof Repair',
-    description: 'Comprehensive repair for a leaking roof using quality materials.',
-    details: 'Applied an underlay, black charcoal waterproof felt, and sealed the surrounding areas to ensure a long-lasting, leak-proof solution. Clied!',
-    image: '/images/projects/leaking-roof.jpg',
   },
 ];
 
