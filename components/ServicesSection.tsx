@@ -1,7 +1,7 @@
 import { MdRoofing, MdOutlineCleaningServices } from "react-icons/md"
 import { SlEnergy } from "react-icons/sl";
 import Link from "next/link"
-import Image from "next/Image"
+import Image from "next/image"
 
 const cards = [
   {
