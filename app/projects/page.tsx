@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,95 +6,73 @@ import Link from 'next/link';
 // Projects array sorted by date (most recent first)
 const projects = [
   {
-  "id": 9,
-  "title": "Full Felt Roof Replacement",
-  "description": "Complete replacement of the felt roof with professional standards.",
-  "details": "In our last job of 2024, we carried out a full replacement of the felt roof. We applied an underlay and then a top coat of green felt. All work was burned down correctly, ensuring durability and longevity. We also removed all rubbish from the property, leaving it clean and tidy. Our customer was very happy with the results!",
-  "image": "/images/projects/felt-repair.jpg" // Update the image path as needed
+    id: 9,
+    title: "Full Felt Roof Replacement in Coventry",
+    description: "Professional felt roof replacement services in Coventry and surrounding areas.",
+    details: "In our final project of 2024, we completed a comprehensive felt roof replacement in Coventry. Our team installed an underlay and a top coat of durable green felt, ensuring the highest professional standards. All debris was removed, leaving the property clean and tidy. The client was delighted with the results, and their roof is now protected for years to come!",
+    image: "/images/projects/felt-repair.jpg", // Update the image path as needed
   },
   {
     id: 8,
-    title: 'Expert Tile Replacement After Storm Damage',
-    description: 'Replaced broken tiles due to storm damage.',
-    details: `After a recent storm, we identified broken tiles that compromised the integrity of the roof. 
-              Our team promptly removed all damaged tiles and replaced them with new, high-quality materials. 
-              Interestingly, the replacement tiles were of a different type than those on the main roof; however, this did not pose any issues during installation. `,
-    image: '/images/projects/tile-replacement.jpg', // You can update the image path as needed
-  },  
+    title: "Storm Damage Tile Replacement in Coventry",
+    description: "Expert tile replacement services after storm damage in Coventry.",
+    details: `Following a recent storm in Coventry, we replaced broken roof tiles that compromised the roof's integrity. 
+              Our team used high-quality replacement tiles, ensuring a perfect fit and long-lasting results. Despite using tiles of a different type from the original roof, the repair seamlessly blended into the existing structure.`,
+    image: '/images/projects/tile-replacement.jpg',
+  },
   {
     id: 7,
-    title: 'Roof Cleaning Service',
-    description: 'Thorough roof cleaning to remove moss and debris.',
-    details: `Today, we provided a comprehensive roof cleaning service, removing all moss and debris. 
-              Our team cleaned out all gutters and downpipes, ensuring proper drainage. 
-              We also wiped down the fascia and soffits, enhancing the overall appearance of the roof. 
-              All waste was removed from the property, and the surrounding areas were washed down for a clean finish. 
-              A happy customer means a happy business! 
-              For any roofing or exterior cleaning needs, give us a call or message today for a free quote. 
-              We offer fast and reliable service at affordable prices, 
-              with all work carried out to a professional standard. 
-              SJD Exterior Cleaning & Roofing Repairs LTD.`,
-    image: '/images/projects/roof-cleaning.jpg', // Update the image path as needed
+    title: "Comprehensive Roof Cleaning in Coventry",
+    description: "Affordable and reliable roof cleaning services in Coventry.",
+    details: `We provided an extensive roof cleaning service in Coventry, removing moss, debris, and blockages. 
+              Our team also cleaned gutters, downpipes, fascia, and soffits, leaving the roof spotless and fully functional. 
+              All waste was removed, and the property was left in pristine condition. 
+              Looking for reliable roof cleaning services? Contact Coventry Roofers for a free quote today!`,
+    image: '/images/projects/roof-cleaning.jpg',
   },
   {
     id: 6,
-    title: 'Breathable Membrane Installation',
-    description: 'Repaired felt issues by installing a breathable membrane.',
-    details: `Today, we addressed a customer’s roof with holes in the felt. 
-              Our team removed the old felt and replaced it with a breathable membrane, ensuring better ventilation and moisture control. 
-              We also replaced the battens with treated battens for enhanced durability. 
-              After securing the tiles back into position, we removed all waste from the property. 
-              A happy customer means a happy business! 
-              For any roofing or exterior cleaning needs, give us a call or message today. 
-              We pride ourselves on fast, reliable service at affordable prices, 
-              with all work carried out to a professional standard. 
-              SJD Exterior Cleaning & Roofing Repairs LTD.`,
-    image: '/images/projects/breathable-membrane.jpg', // Update the image path as needed
+    title: "Breathable Membrane Installation in Coventry",
+    description: "Upgrade your roof with breathable membrane installation by Coventry Roofers.",
+    details: `Our team addressed a client's roofing issues in Coventry by replacing old, damaged felt with a modern breathable membrane. 
+              We also installed treated battens for added durability and ensured the tiles were securely repositioned. 
+              All waste was removed, leaving the property clean and tidy. For top-tier roofing services in Coventry, trust our experienced team.`,
+    image: '/images/projects/breathable-membrane.jpg',
   },
   {
     id: 5,
-    title: 'Roof Leak Repair in Stoney Stanton',
-    description: 'Addressed a leak by installing proper underlay and felt.',
-    details: `Today in Stoney Stanton, we addressed a customer's leak and discovered there was no underlay at all, with holes in places too. 
-              ✅ Removed old felt 
-              ✅ Applied underlay the correct way 
-              ✅ Applied black torch on felt 
-              ✅ Fitted and sealed to the wall 
-              ✅ All waste from property removed 
-              A happy customer means a happy business! 
-              For any roofing or exterior cleaning needs, give us a call or message today. 
-              We pride ourselves on fast, reliable service at affordable prices, 
-              with all work carried out to a professional standard. 
-              SJD Exterior Cleaning & Roofing Repairs LTD.`,
-    image: '/images/projects/felt-repair-2.jpg', // Update the image path as needed
+    title: "Roof Leak Repair in Stoney Stanton (Near Coventry)",
+    description: "Expert roof leak repair services near Coventry.",
+    details: `We tackled a roof leak in Stoney Stanton, near Coventry, by installing underlay and black torch-on felt to seal the issue. 
+              The client’s roof is now fully waterproof and built to last. For reliable roofing repairs in Coventry and nearby areas, contact us today.`,
+    image: '/images/projects/felt-repair-2.jpg',
   },
   {
     id: 4,
-    title: 'Driveway & Exterior Cleaning',
-    description: 'Brightened up a dull driveway in the Sharnford/Hinckley area.',
-    details: 'Transformedat left the house looking dull. Achieved a much cleaner, brighter look without any mess or unwanted paint marks. Fast, reliable service with affordable prices, leaving a happy customer!',
+    title: "Driveway & Exterior Cleaning in Coventry",
+    description: "Enhance your property’s curb appeal with our cleaning services in Coventry.",
+    details: "We transformed a dull driveway in Coventry into a clean and bright space, providing fast and affordable exterior cleaning services. Contact Coventry Roofers for all your cleaning needs.",
     image: '/images/projects/driveway-clean.jpg',
   },
-
   {
     id: 3,
-    title: 'Moss Removal & Gutter Cleaning',
-    description: 'Removed moss from a roof and cleared blocked gutters and downpipes.',
-    details: 'The customer was experiencing moss buildup causing blockages  and downpipes. We scraped off all the moss, cleaned out the gutters, and unblocked the downpipes. Fast and reliable service with high-quality work!',
+    title: "Moss Removal & Gutter Cleaning in Coventry",
+    description: "Professional moss removal and gutter cleaning services in Coventry.",
+    details: "Our team efficiently removed moss buildup and cleared blocked gutters and downpipes in Coventry, ensuring proper water flow and preventing future damage. Fast, reliable, and professional service guaranteed.",
     image: '/images/projects/moss-removal.jpg',
   },
   {
     id: 2,
-    title: 'Gutter Cleaning & Blockage Prevention',
-    description: 'Helping with all gutter cleaning needs to prevent major issues.',
-    details: 'Blocked gutters can lead to severe damage to your property. We conducted a thorough in ensure free water flow, preventing leaks and water damage.',
+    title: "Preventative Gutter Cleaning in Coventry",
+    description: "Preventative gutter cleaning services to protect your property in Coventry.",
+    details: "We conducted a thorough gutter cleaning service in Coventry, removing debris to prevent leaks and water damage. Contact us for affordable and reliable roofing maintenance services in Coventry.",
     image: '/images/projects/gutter-cleaning.jpg',
   },
   {
     id: 1,
-    title: 'Roof Repairs & Exterior Cleaning',
-    description: 'A busy week of roof repairs and exterior cleaning!',
-    details: 'This week, we handled slipped tiles correction, re-bedding ridges, and tile replacements. Ensured everything waa fresh look.',
+    title: "Roof Repairs & Maintenance in Coventry",
+    description: "Comprehensive roof repair and maintenance services in Coventry.",
+    details: "This week, our team in Coventry fixed slipped tiles, re-bedded ridges, and replaced damaged tiles, ensuring a fresh and sturdy roof. Contact Coventry Roofers for expert roofing services.",
     image: '/images/projects/roof-repair.jpg',
   },
 ];
@@ -107,9 +85,9 @@ const Projects = () => {
     details: string;
     image: string;
   };
-  
+
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  
+
   // Function to open the modal
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -125,12 +103,12 @@ const Projects = () => {
       {/* Page Header */}
       <div className="bg-white px-6 pt-8 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-base font-semibold text-indigo-600">Our Work</p>
+          <p className="text-base font-semibold text-indigo-600">Coventry Roofers</p>
           <h2 className="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-            Recent Projects
+            Recent Roofing Projects in Coventry
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Explore some of our recent projects, showcasing our expertise in exterior cleaning and roofing repairs.
+            Discover our recent roofing and exterior cleaning projects in Coventry, showcasing our dedication to quality and customer satisfaction.
           </p>
         </div>
       </div>
