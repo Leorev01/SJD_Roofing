@@ -38,7 +38,7 @@ export default function Example() {
                 {/* Text Content */}
                 <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <h1 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
-                    Your Trusted Roofing & Exterior Cleaning Experts
+                    Your Trusted Roofing & Exterior Cleaning Experts In Coventry
                 </h1>
                 <p className="mt-8 text-lg font-medium text-gray-700 sm:max-w-md sm:text-xl lg:max-w-none">
                     With over 10 years of experience, we specialize in roof repairs, re-roofs, and exterior cleaning. 
@@ -118,7 +118,7 @@ export default function Example() {
                 Our mission is to provide top-quality roofing repairs, re-roofs, and exterior cleaning services that are reliable, affordable, and exceed customer expectations. We pride ourselves on our 5-star reviews, 15-year warranty on all re-roofs, and our commitment to ensuring every customer is satisfied before we leave the job site.
                 </p>
                 <p className="mt-8 max-w-xl text-lg text-gray-600">
-                We believe that a happy customer means a happy business. With over 10 years of experience as a family-run company, we offer fast and efficient services with no upfront payments required. Whether it&apos;s roof cleaning, driveway pressure washing, or loft insulation, we&apos;re here to help improve the look and value of your home.
+                We believe that a happy customer means a happy business. With over 10 years of experience as a family-run company in Coventry, we offer fast and efficient services with no upfront payments required. Whether it&apos;s roofing, roof cleaning, driveway pressure washing, or loft insulation, we&apos;re here to help improve the look and value of your home.
                 </p>
                 <div className="mt-8">
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
@@ -169,7 +169,7 @@ export default function Example() {
                 Our Values
                 </h2>
                 <p className="mt-6 text-lg/8 text-gray-600">
-                We are guided by a set of core values that shape everything we do. These values ensure we provide the best service possible and stay committed to excellence, integrity, and customer satisfaction.
+                We are guided by a set of core values that shape everything we do. These values ensure we provide the best services and roofing in Coventry and stay committed to excellence, integrity, and customer satisfaction.
                 </p>
             </div>
             <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -188,29 +188,6 @@ export default function Example() {
                 ))}
             </dl>
         </div>
-
-        {/* Team section */}
-        {/*<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our team</h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
-              We are a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
-              best results for our clients.
-            </p>
-          </div>
-          <ul
-            role="list"
-            className="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
-          >
-            {team.map((person) => (
-              <li key={person.name}>
-                <img alt="" src={person.imageUrl} className="mx-auto h-24 w-24 rounded-full" />
-                <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">{person.name}</h3>
-                <p className="text-sm/6 text-gray-600">{person.role}</p>
-              </li>
-            ))}
-          </ul>
-        </div>*/}
 
         {/* Testimonials section */}
         <div className="bg-white py-16">
