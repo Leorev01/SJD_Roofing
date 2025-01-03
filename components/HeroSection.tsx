@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <Image 
           src={roofImage} // Your image path
-          alt="Roofing and Exterior Services"
+          alt="Roofing and Exterior Cleaning Services"
           layout="fill"
           objectFit="cover"
           className="opacity-50"
@@ -17,7 +17,7 @@ export default function HeroSection() {
       </div>
       <div className="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 text-center z-10">
         <h2 className="text-4xl font-bold sm:text-5xl lg:text-6xl mb-4">
-          Protect Your Home with Expert Roofing & Cleaning Services
+          Protect Your Home With Coventry's Best Roofing & Cleaning Service Experts
         </h2>
         <h2 className="text-lg sm:text-xl mb-8">
           High-quality roofing repairs, exterior cleaning, and more in Coventry. Trusted by hundreds of happy clients.
