@@ -17,7 +17,7 @@ export default function HeroSection() {
       </div>
       <div className="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 text-center z-10">
         <h2 className="text-4xl font-bold sm:text-5xl lg:text-6xl mb-4">
-          Protect Your Home With Coventry's Best Roofing & Cleaning Service Experts
+          Protect Your Home With Coventry&apos;s Best Roofing & Cleaning Service Experts
         </h2>
         <h2 className="text-lg sm:text-xl mb-8">
           High-quality roofing repairs, exterior cleaning, and more in Coventry. Trusted by hundreds of happy clients.
