@@ -8,12 +8,12 @@ import Footer from "@/components/Footer";
 const logoPath = "/images/logo.png"; // This path is relative to the public folder
 
 export const metadata: Metadata = {
-  title: "Coventry Roofers and Cleaners", // Default title for the website
-  description: "We provide quality roofing and  exterior cleaning services in Coventry.",
+  title: "SJD Roofers & Exterior Cleaners Coventry", // Default title for the website
+  description: "We provide quality roofing and exterior cleaning services in Coventry and the West Midlands.",
   openGraph: {
     type: "website",
-    title: "SJD Exterior cleaning and roofing",
-    description: "We provide quality roofing and  exterior cleaning services in Coventry.",
+    title: "SJD Roofers & Exterior Cleaners Coventry",
+    description: "We provide quality roofing and exterior cleaning services in Coventry and the West Midlands.",
     url: "https://www.sjdroofing.com",
     images: [logoPath], // Use the path to the image in the public folder
   },
