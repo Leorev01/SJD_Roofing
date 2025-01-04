@@ -5,17 +5,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // Static path for the logo image
-const logoPath = "/images/logo.png"; // This path is relative to the public folder
+const logoPath = "/images/logo.png"; // Path relative to the public folder
 
 export const metadata: Metadata = {
   title: "SJD Roofing & Exterior Cleaning | Coventry Roofers", // Default title for the website
-  description: "Trusted roofing and exterior cleaning services in Coventry and the West Midlands. Quality roof repairs, cleaning, and maintenance by SJD Roofing.",
+  description:
+    "Trusted roofing and exterior cleaning services in Coventry and the West Midlands. Quality roof repairs, cleaning, and maintenance by SJD Roofing.",
   openGraph: {
     type: "website",
     title: "SJD Roofing & Exterior Cleaning | Coventry Roofers",
-    description: "Trusted roofing and exterior cleaning services in Coventry and the West Midlands. Quality roof repairs, cleaning, and maintenance by SJD Roofing.",
+    description:
+      "Trusted roofing and exterior cleaning services in Coventry and the West Midlands. Quality roof repairs, cleaning, and maintenance by SJD Roofing.",
     url: "https://www.sjdroofing.com",
-    images: [logoPath], // Use the path to the image in the public folder
+    images: [logoPath], // Path to the image in the public folder
   },
 };
 
@@ -24,6 +26,7 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -38,11 +41,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon Link */}
+        {/* Favicon */}
         <link rel="icon" href="/images/logo.png" type="image/png" />
-       <meta name="trustpilot-one-time-domain-verification-id"
-         content="c7f2fb0b-0dd6-4948-b594-33f47fb4a75a" />
-        {/* Other metadata */}
+
+        {/* Trustpilot Domain Verification */}
+        <meta
+          name="trustpilot-one-time-domain-verification-id"
+          content="c7f2fb0b-0dd6-4948-b594-33f47fb4a75a"
+        />
+
+        {/* Additional Metadata */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
