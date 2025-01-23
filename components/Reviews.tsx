@@ -21,7 +21,9 @@ const reviews = {
        scrolling="no"
        frameborder="0"
        allowfullscreen="true"
-       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+       </iframe>
+       `,
     },
     {
       id: 2,
@@ -36,6 +38,7 @@ const reviews = {
        allowfullscreen="true"
        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
         </iframe>
+        `,
     },
     {
       id: 3,
@@ -50,6 +53,7 @@ const reviews = {
         allowfullscreen="true"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
       </iframe>
+      `,
     },
     {
       id: 4,
