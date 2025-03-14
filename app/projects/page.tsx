@@ -56,24 +56,40 @@ const projects = [
   },
   {
     id: 3,
-    title: "Moss Removal & Gutter Cleaning in Coventry",
-    description: "Professional moss removal and gutter cleaning services in Coventry.",
-    details: "Our team efficiently removed moss buildup and cleared blocked gutters and downpipes in Coventry, ensuring proper water flow and preventing future damage. Fast, reliable, and professional service guaranteed.",
-    image: '/images/projects/moss-removal.jpg',
+    title: "Patio Power Wash & Restoration in Coventry",
+    description: "Bringing patios back to life with professional power washing.",
+    details: `⭐️⭐️⭐️⭐️⭐️
+              The pictures do the talking! This was our first clean of the year, focusing on the garage area. 
+              We performed a full power wash, bringing back the original color of the patio. All waste was removed, leaving the area spotless. 
+              For any exterior cleaning or roof repairs, call or message us today for a free quote. 
+              ⭐️⭐️⭐️⭐️⭐️ reviews. Fast, reliable, and affordable prices. All work is carried out to a high standard.`,
+    image: '/images/projects/patio-power-wash.jpg',
   },
   {
     id: 2,
-    title: "Preventative Gutter Cleaning in Coventry",
-    description: "Preventative gutter cleaning services to protect your property in Coventry.",
-    details: "We conducted a thorough gutter cleaning service in Coventry, removing debris to prevent leaks and water damage. Contact us for affordable and reliable roofing maintenance services in Coventry.",
-    image: '/images/projects/gutter-cleaning.jpg',
+    title: "Felt Roof Repair in Hinckley",
+    description: "Expert felt roof repair and replacement services in Hinckley.",
+    details: `Today's job in the Hinckley area involved repairing a hole in the felt roof. 
+              We removed old battens and felt, replacing them with a breathable membrane and treated battens. 
+              All tiles were securely repositioned, and lead flashing was correctly reinstalled. 
+              All waste was removed, leaving the property clean and tidy. 
+              For any roofing or exterior cleaning needs, call or message us today for a free quote. 
+              Fast, reliable, and affordable prices. All work is carried out to a professional standard.`,
+    image: '/images/projects/felt-repair-hinckley.jpg',
   },
   {
     id: 1,
-    title: "Roof Repairs & Maintenance in Coventry",
-    description: "Comprehensive roof repair and maintenance services in Coventry.",
-    details: "This week, our team in Coventry fixed slipped tiles, re-bedded ridges, and replaced damaged tiles, ensuring a fresh and sturdy roof. Contact Coventry Roofers for expert roofing services.",
-    image: '/images/projects/roof-repair.jpg',
+    title: "Gutter Clearance & Waterproofing in Coventry",
+    description: "Prevent leaks with professional gutter clearance and waterproofing.",
+    details: `Did you know that full gutters can cause leaks? Instead of water flowing, it falls back, causing bigger problems. 
+              As shown in the pictures, this guttering needed attention. 
+              ✅ Fully removed all moss
+              ✅ Applied Acrypol waterproof protection
+              ✅ All waste was removed from the property
+              We'll be back soon for a roof clean! 
+              For any exterior cleaning or roof repairs, call or message us today. 
+              Fast, reliable, and affordable prices. All work is carried out to a professional standard.`,
+    image: '/images/projects/gutter-clearance.jpg',
   },
 ];
 
