@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "SJD Roofing & Exterior Cleaning | Coventry Roofers",
     description:
       "Trusted roofing and exterior cleaning services in Coventry and the West Midlands. Quality roof repairs, cleaning, and maintenance by SJD Roofing.",
-    url: "https://www.sjdroofing.com",
+    url: "https://www.sjdexteriorcleaningroofrepairs.com/",
     images: [logoPath], // Path to the image in the public folder
   },
 };
